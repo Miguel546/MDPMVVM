@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="position"
+            type="Integer" />
+        <variable name="model" type="com.luismiguel.mdpbancocomercio.viewmodel.MainActivityViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/selector_bordes"
+        android:orientation="vertical">
+
+        <android.widget.Button
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/noto_regular"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="14dp"
+            android:text="@{model.getUsuariosAt(position).name}"
+            android:onClick="@{() -> model.onItemClick(position)}"/>
+
+    </RelativeLayout>
+</layout>
