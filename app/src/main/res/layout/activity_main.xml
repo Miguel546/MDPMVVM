@@ -32,7 +32,7 @@
                     android:background="@color/colorPrimary"
                     android:fontFamily="@font/noto_regular"
                     android:gravity="center"
-                    android:text="Listado Personas"
+                    android:text="@string/listado_personas"
                     android:textAllCaps="true"
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
@@ -106,14 +106,14 @@
             android:gravity="center"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="Traer lista" />
+            android:text="@string/traer_lista" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_below="@id/btnTraerLista"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Haga click en el boton para traer la data"
+            android:text="@string/haga_click_en_el_boton_para_traer_la_data"
             android:gravity="center" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -134,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/noto_regular"
-            android:text="Ultimo actualizacion"
+            android:text="@string/ultimo_actualizacion"
             android:gravity="center"
             android:visibility="gone"
             android:padding="5dp"

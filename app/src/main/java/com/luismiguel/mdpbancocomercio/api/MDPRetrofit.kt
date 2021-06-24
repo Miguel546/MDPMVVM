@@ -7,5 +7,5 @@ import retrofit2.http.GET
 
 interface MDPRetrofit {
     @GET(BuildConfig.Usuarios)
-    fun CONSULTAR_USUARIOS(): Call<Users>?
+    fun consultarusuarios(): Call<Users>?
 }

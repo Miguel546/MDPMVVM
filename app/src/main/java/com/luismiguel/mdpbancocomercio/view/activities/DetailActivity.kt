@@ -17,10 +17,10 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val intent = getIntent()
+        val intent = intent
 
         val usuario : UserItem = Gson().fromJson(intent.getStringExtra("usuario"), UserItem::class.java)
-        binding.setUsuario(usuario)
+        binding.usuario = usuario
 
     }
 

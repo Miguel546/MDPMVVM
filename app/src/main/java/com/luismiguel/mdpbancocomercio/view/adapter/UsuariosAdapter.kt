@@ -31,8 +31,8 @@ class UsuariosAdapter(var usuariosViewModel: MainActivityViewModel, var resource
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuariosHolder {
-        var layoutInflater: LayoutInflater = LayoutInflater.from(parent.context)
-        var binding: ItemUsuarioBinding = DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
+        val layoutInflater: LayoutInflater = LayoutInflater.from(parent.context)
+        val binding: ItemUsuarioBinding = DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
         return UsuariosHolder(binding)
     }
 

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 class MDPClient {
 
-    private lateinit var retrofit: Retrofit
+    private var retrofit: Retrofit
     init{
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -27,7 +27,7 @@ class MDPClient {
     companion object {
         private var INSTANCE: MDPClient ? = null
 
-        fun getInstance(): MDPRetrofit? {
+        fun getInstance(): MDPRetrofit {
             if (INSTANCE == null) {
                 INSTANCE = MDPClient()
             }

@@ -11,7 +11,7 @@ import com.luismiguel.mdpbancocomercio.view.adapter.UsuariosAdapter
 class MainActivityViewModel: ViewModel() {
     private var usuariosObserable: UsuariosObservable = UsuariosObservable()
     private var recyclerUsuariosAdapter: UsuariosAdapter? = null
-    var selected: MutableLiveData<UserItem> = MutableLiveData<UserItem>()
+    private var selected: MutableLiveData<UserItem> = MutableLiveData<UserItem>()
     fun callUsuarios(){
         usuariosObserable.callUsuarios()
 
@@ -34,7 +34,7 @@ class MainActivityViewModel: ViewModel() {
     }
 
     fun getUsuariosAt(position: Int): UserItem?{
-        var solicitantes: List<UserItem>? = usuariosObserable.getUsuarios()?.value
+        val solicitantes: List<UserItem>? = usuariosObserable.getUsuarios()?.value
         return solicitantes?.get(position)
     }
 

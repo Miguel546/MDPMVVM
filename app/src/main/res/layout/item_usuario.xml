@@ -22,12 +22,11 @@
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:justificationMode="inter_word"
             android:fontFamily="@font/noto_regular"
-            android:gravity="left|center_vertical"
+            android:gravity="start|center_vertical"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:text="@{model.getUsuariosAt(position).name}"
             android:onClick="@{() -> model.onItemClick(position)}"/>
 
